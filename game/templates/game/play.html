@@ -1,0 +1,13 @@
+{% extends 'game/base.html' %}
+
+{% block content %}
+<div id="gameForm">
+  <form method="POST">
+    {% csrf_token %}
+    {% if game %}
+      {{ game }}
+    {% endif %}
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+{% endblock %}

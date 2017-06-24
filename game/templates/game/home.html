@@ -1,13 +1,5 @@
-<html>
-<head>
-  <title>How to Life!?</title>
-</head>
-
-<body>
-  <div id="header">
-    <header><h1>How to Life!?</h1></header>
-  </div>
-
+{% extends 'game/base.html' %}
+{% block content %}
   <div id ="welcome">
     <h2>Welcome!</h2>
       <p>How to Life!? is a short multiple choice game.</p>
@@ -25,8 +17,6 @@
       end of the game we are definitely going to judge you. Whether we
       have nice things to say or not, is up to you.</p>
 
-     <a href="">Play</a>
+     <a href="{% url 'game:play' %}">Play</a>
   </div>
-
-</body>
-</html>
+{% endblock %}

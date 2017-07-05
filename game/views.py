@@ -22,3 +22,5 @@ def play(request):
 def results(request):
     #questions = Question.objects.all()
     #return render(request, 'game/results.html', {'questions': questions})
+    questions = "Questions"
+    return render(request, 'game/results.html', {'questions': questions})

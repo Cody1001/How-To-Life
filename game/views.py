@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .forms import GameForm
 from .services import get_judgement
-from .models import Question
+#from .models import Question
 
 def home(request):
     return render(request, 'game/home.html', {})
@@ -20,5 +20,5 @@ def play(request):
     return render(request, 'game/play.html', {'game': game})
 
 def results(request):
-    questions = Question.objects.all()
-    return render(request, 'game/results.html', {'questions': questions})
+    #questions = Question.objects.all()
+    #return render(request, 'game/results.html', {'questions': questions})

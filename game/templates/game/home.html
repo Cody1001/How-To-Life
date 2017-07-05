@@ -1,6 +1,6 @@
 {% extends 'game/base.html' %}
 {% block content %}
-  <div id ="welcome">
+  <div id ="welcome" class="col-sm-12 col-md-6 col-lg-6">
     <h2>Welcome!</h2>
       <p>How to Life!? is a short multiple choice game.</p>
 
@@ -17,6 +17,7 @@
       end of the game we are definitely going to judge you. Whether we
       have nice things to say or not, is up to you.</p>
 
-     <a href="{% url 'game:play' %}">Play</a>
+
+       <a href="{% url 'game:play' %}">Play</a>
   </div>
 {% endblock %}

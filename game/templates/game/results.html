@@ -1,33 +1,40 @@
 {% extends 'game/base.html' %}
 
 {% block content %}
-<div id="judgement">
+<div id="judgement" class="col-sm-12 col-md-6 col-lg-6">
 <h2>How did you do?</h2>
   {% if messages %}
     {% for message in messages %}
-      <p>{{ message }}</p>
+      <p class="text-info">{{ message }}</p>
     {% endfor %}
   {% endif %}
 </div>
 
-<div id="votes">
+<div id="votes" class="col-sm-12 col-md-6 col-lg-6">
 <h2>How did most people play?</h2>
 {% if questions %}
   {% for question in questions %}
-    <p>{{ question.question_text }}</p>
+    <p class="lead">{{ question.question_text }}</p>
+    <table id="review_answers" class="table">
+      <tr>
+        <th>How many people said...</th>
+        <th>Votes</th>
+      </tr>
     {% for answer in question.get_answers %}
-    <ul id="review_answers">
-      <li>{{ answer.answer_text }} got {{ answer.votes }} votes.</li>
-    </ul>
+      <tr>
+        <td>{{ answer.answer_text }}</td>
+        <td>{{ answer.votes }}</td>
+      </tr>
     {% endfor %}
+  </table>
   {% endfor %}
 {% endif %}
 </div>
 
 <div class="foot_links">
   <footer>
-    <a href="{% url 'game:play' %}">Play again?</a>
-    <a href="{% url 'game:home' %}">Home</a>
+    <div><a href="{% url 'game:play' %}">Play again?</a></div>
+    <div><a href="{% url 'game:home' %}">Home</a></div>
   </footer>
 </div>
 

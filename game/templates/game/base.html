@@ -1,17 +1,28 @@
-<html>
+{% load staticfiles %}
+<html lang="en">
 <head>
   <title>How to Life!?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  </script>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
-  <div id="header">
+  <div class="container-fluid">
+  <div id="header" class="page-header">
     <header>
-      <h1><a href="{% url 'game:home' %}">How to Life!?</a></h1>
+      <h1 class="text-center"><a href="{% url 'game:home' %}">How to Life!?</a></h1>
     </header>
   </div>
 
   {% block content %}
   {% endblock %}
+</div>
 
 </body>
 </html>

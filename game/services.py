@@ -2,7 +2,7 @@ from .models import Question, Answer
 
 def get_judgement(form_data):
     karma = get_karma(form_data)
-    if karma < -300:
+    if karma < -500:
         karma = f"You collected {karma} karma."
         judgement = "You're a truly horrible person."
 

@@ -7,7 +7,15 @@ a {
   font-size: 120%;
 }
 
+div#welcome a {
+  display: inline-block;
+  margin : 0 0 5% 0;
+}
 
 ul {
   list-style-type: none;
+}
+
+div.foot_links {
+  margin: 0 0 5% 0;
 }

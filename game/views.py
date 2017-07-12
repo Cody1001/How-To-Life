@@ -19,7 +19,7 @@ def play(request):
         game = GameForm()
         questions = Question.objects.all()
         context = {'game': game, 'questions': questions}
-        return render(request, 'game/play.html', context)
+    return render(request, 'game/play.html', context)
 
 def results(request):
     questions = Question.objects.all()

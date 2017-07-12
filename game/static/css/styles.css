@@ -1,10 +1,19 @@
 body {
   font-family     : "Times New Roman", Times, serif;
+  background-color: rgb(245, 245, 245);
 }
 
+div.jumbotron {
+  background-color     : rgb(0, 0, 128);
+}
+
+div.jumbotron a {
+  color: rgb(245, 245, 245);
+}
 
 a {
   font-size: 120%;
+  color: rgb(0, 0, 128);
 }
 
 div#welcome a {
@@ -16,6 +25,21 @@ ul {
   list-style-type: none;
 }
 
+input[type=submit] {
+  background-color: rgb(0, 0, 128);
+  color           : rgb(245, 245, 245);
+}
+
 div.foot_links {
   margin: 0 0 5% 0;
+}
+
+div.foot_links a {
+  background-color: rgb(0, 0, 128);
+  color           : rgb(245, 245, 245);
+}
+
+div.foot_links button {
+  background-color: rgb(0, 0, 128);
+  color           : rgb(245, 245, 245);
 }

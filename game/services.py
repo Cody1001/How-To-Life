@@ -1,5 +1,6 @@
 from .models import Question, Answer
 
+
 def get_judgement(form_data):
     karma = get_karma(form_data)
     if karma < -500:

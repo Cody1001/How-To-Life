@@ -17,7 +17,9 @@ def play(request):
             return redirect('game:results')
     else:
         game = GameForm()
-    return render(request, 'game/play.html', {'game': game})
+        questions = Question.objects.all()
+        context = {'game': game, 'questions': questions}
+    return render(request, 'game/play.html', context)
 
 def results(request):
     questions = Question.objects.all()

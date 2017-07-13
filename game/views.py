@@ -15,11 +15,18 @@ def play(request):
             judge = get_judgement(form_data)
             messages.add_message(request, messages.INFO, judge)
             return redirect('game:results')
+        else:
+            game = form
+            questions = Question.objects.all()
+            context = {'game': game,
+                       'questions': questions,
+                       'error_message': "Not all questions were answered.",
+                       }
+            return render(request, 'game/play.html', context)
     else:
-        pass
-    game = GameForm()
-    questions = Question.objects.all()
-    context = {'game': game, 'questions': questions}
+        game = GameForm()
+        questions = Question.objects.all()
+        context = {'game': game, 'questions': questions}
     return render(request, 'game/play.html', context)
 
 def results(request):
